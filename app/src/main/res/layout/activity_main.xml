@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,19 +7,19 @@
     tools:context="com.example.ashish.newsrella.Activity.MainActivity"
     android:background="@drawable/gradient">
     <TextView
+        android:id="@+id/select_sources"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="@string/select_news_sources"
         android:textColor="#ffffff"
         android:textSize="20sp"/>
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_news_sources"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/select_sources"
         android:gravity="center"/>
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
 
 
