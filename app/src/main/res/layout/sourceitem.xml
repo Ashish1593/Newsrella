@@ -11,8 +11,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/source_name"
@@ -31,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/source_name"
             android:layout_margin="10dp"
+            android:layout_centerVertical="true"
             android:lineSpacingExtra="5dp"
             android:textAlignment="center"
             android:textColor="#ffffff"
