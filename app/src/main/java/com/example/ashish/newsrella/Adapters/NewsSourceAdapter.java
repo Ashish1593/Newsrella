@@ -22,7 +22,6 @@ public class NewsSourceAdapter extends  RecyclerView.Adapter<NewsSourceAdapter.N
     class NewsSourcesViewHolder extends RecyclerView.ViewHolder {
         TextView sourceName;
         TextView category;
-        TextView country;
         TextView desctiption;
         CardView sources;
 

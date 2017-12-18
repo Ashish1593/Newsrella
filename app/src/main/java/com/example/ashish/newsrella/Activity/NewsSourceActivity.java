@@ -21,10 +21,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class NewsSourceActivity extends AppCompatActivity {
 
-
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = NewsSourceActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<NewsSourcesResponse> call, Response<NewsSourcesResponse> response) {
                 List<Sources> sources = response.body().getSources();
-                recyclerView.setAdapter(new NewsSourceAdapter(MainActivity.this, sources));
+                recyclerView.setAdapter(new NewsSourceAdapter(NewsSourceActivity.this, sources));
                 Log.d(TAG, "Number of news Sources received: " + sources.size());
             }
 
@@ -49,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Call<NewsSourcesResponse> call, Throwable t) {
                 // Log error here since request failed
                 Log.e(TAG, t.toString());
+                Toast.makeText(NewsSourceActivity.this,"error fetching news sources",Toast.LENGTH_SHORT)
+                        .show();
             }
         });
     }

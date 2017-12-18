@@ -26,7 +26,7 @@ import retrofit2.Response;
 
 public class TopHeadlineActivity extends AppCompatActivity {
 
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = NewsSourceActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
