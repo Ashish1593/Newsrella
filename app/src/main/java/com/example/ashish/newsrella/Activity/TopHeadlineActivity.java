@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.ashish.newsrella.Adapters.NewsHeadLineAdapter;
 import com.example.ashish.newsrella.Business.Article;
@@ -39,6 +40,7 @@ public class TopHeadlineActivity extends AppCompatActivity {
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
+        // fetching top headlines list of selected news source
         Call<TopHeadlinesResponse> call = apiService.getTopHeadlines(source, Constants.API_KEY);
         call.enqueue(new Callback<TopHeadlinesResponse>() {
             @Override
@@ -51,6 +53,8 @@ public class TopHeadlineActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<TopHeadlinesResponse> call, Throwable t) {
                 // Log error here since request failed
+                Toast.makeText(TopHeadlineActivity.this,"error fetching news sources",Toast.LENGTH_SHORT)
+                        .show();
                 Log.e(TAG, t.toString());
             }
         });

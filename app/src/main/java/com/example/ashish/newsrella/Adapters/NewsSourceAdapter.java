@@ -46,8 +46,7 @@ public class NewsSourceAdapter extends  RecyclerView.Adapter<NewsSourceAdapter.N
     @Override
     public NewsSourcesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.sourceitem, parent, false);
-        NewsSourcesViewHolder viewHolder = new NewsSourcesViewHolder(view);
-        return viewHolder;
+        return new NewsSourcesViewHolder(view);
     }
 
     @Override

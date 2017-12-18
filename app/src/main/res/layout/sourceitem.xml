@@ -20,7 +20,7 @@
             android:layout_margin="10dp"
             android:lineSpacingExtra="5dp"
             android:textAlignment="center"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"/>
 
@@ -33,7 +33,7 @@
             android:layout_centerVertical="true"
             android:lineSpacingExtra="5dp"
             android:textAlignment="center"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"/>
 
@@ -47,7 +47,7 @@
             android:layout_toRightOf="@id/category"
             android:lineSpacingExtra="5dp"
             android:textAlignment="center"
-            android:textColor="#8DC2F3"
+            android:textColor="@color/description"
             android:textSize="18sp"
             android:textStyle="bold"/>
     </RelativeLayout>

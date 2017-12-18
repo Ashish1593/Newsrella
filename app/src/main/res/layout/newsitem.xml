@@ -20,7 +20,7 @@
             android:layout_margin="10dp"
             android:lineSpacingExtra="5dp"
             android:textAlignment="center"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"/>
 
@@ -42,7 +42,7 @@
                 android:layout_below="@id/NewsTitle"
                 android:layout_toRightOf="@id/NewsImage"
                 android:layout_toEndOf="@+id/NewsImage"
-                android:textColor="#8DC2F3"
+                android:textColor="@color/description"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
   </RelativeLayout>

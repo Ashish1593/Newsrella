@@ -12,9 +12,11 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
+    //for fetching news sources
     @GET("sources?language=en&country=us")
     Call<NewsSourcesResponse> getNewsSources(@Query("apikey") String apiKey);
 
+    //for fetching top headlines of given news sources
     @GET("top-headlines")
     Call<TopHeadlinesResponse> getTopHeadlines(@Query("sources") String sources, @Query("apikey")
             String apiKey);

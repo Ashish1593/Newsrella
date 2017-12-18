@@ -50,12 +50,11 @@ public class NewsHeadLineAdapter extends RecyclerView.Adapter<NewsHeadLineAdapte
     @Override
     public NewsHeadlinesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.newsitem, parent, false);
-        NewsHeadlinesViewHolder viewHolder = new NewsHeadlinesViewHolder(view);
-        return viewHolder;
+        return new NewsHeadlinesViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(NewsHeadlinesViewHolder holder, final int position) {
+    public void onBindViewHolder(NewsHeadlinesViewHolder holder,int position) {
 
         holder.newsTitle.setText(newsLists.get(position).getTitle());
         String imgurl = newsLists.get(position).getUrlToImage();

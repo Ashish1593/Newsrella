@@ -35,6 +35,7 @@ public class NewsSourceActivity extends AppCompatActivity {
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
+        //fetching news source list
         Call<NewsSourcesResponse> call = apiService.getNewsSources(Constants.API_KEY);
         call.enqueue(new Callback<NewsSourcesResponse>() {
             @Override
@@ -48,7 +49,7 @@ public class NewsSourceActivity extends AppCompatActivity {
             public void onFailure(Call<NewsSourcesResponse> call, Throwable t) {
                 // Log error here since request failed
                 Log.e(TAG, t.toString());
-                Toast.makeText(NewsSourceActivity.this,"error fetching news sources",Toast.LENGTH_SHORT)
+                Toast.makeText(NewsSourceActivity.this, "error fetching news sources", Toast.LENGTH_SHORT)
                         .show();
             }
         });

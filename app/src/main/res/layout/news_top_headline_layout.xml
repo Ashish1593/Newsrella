@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="@string/top_headlines"
-        android:textColor="#ffffff"
+        android:textColor="@color/white"
         android:textSize="20sp"/>
 
     <android.support.v7.widget.RecyclerView
