@@ -8,11 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.example.ashish.newsrella.Activity.TopHeadlineActivity;
 import com.example.ashish.newsrella.Business.Sources;
 import com.example.ashish.newsrella.R;
-
 import java.util.List;
 
 /**
@@ -32,7 +30,6 @@ public class NewsSourceAdapter extends  RecyclerView.Adapter<NewsSourceAdapter.N
             super(v);
             sourceName = v.findViewById(R.id.source_name);
             category = v.findViewById(R.id.category);
-            country = v.findViewById(R.id.country_name);
             sources = v.findViewById(R.id.sources);
             desctiption = v.findViewById(R.id.description);
         }
@@ -60,7 +57,6 @@ public class NewsSourceAdapter extends  RecyclerView.Adapter<NewsSourceAdapter.N
         holder.sourceName.setText(sourceLists.get(position).getName());
         holder.desctiption.setText(sourceLists.get(position).getDescription());
         holder.category.setText(sourceLists.get(position).getCategory());
-        holder.country.setText(sourceLists.get(position).getCountry());
         holder.sources.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

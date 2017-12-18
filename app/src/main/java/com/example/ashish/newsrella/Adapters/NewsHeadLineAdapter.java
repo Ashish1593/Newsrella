@@ -15,7 +15,6 @@ import com.example.ashish.newsrella.Business.Article;
 import com.example.ashish.newsrella.R;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,26 +28,19 @@ public class NewsHeadLineAdapter extends RecyclerView.Adapter<NewsHeadLineAdapte
         TextView newsTitle;
         ImageView newsPoster;
         TextView newsContent;
-
-        CardView openNews;
+        CardView headlines;
 
         NewsHeadlinesViewHolder(View v) {
             super(v);
-
-
             newsTitle = v.findViewById(R.id.NewsTitle);
             newsPoster = v.findViewById(R.id.NewsImage);
             newsContent = v.findViewById(R.id.Newscontent);
-            openNews =  v.findViewById(R.id.news_headlines);
-
-
+            headlines = v.findViewById(R.id.news_headlines);
         }
-
     }
 
     private Activity activity;
     private List<Article> newsLists;
-
 
     public NewsHeadLineAdapter(Activity activity, List<Article> newsLists) {
         this.activity = activity;
@@ -73,13 +65,10 @@ public class NewsHeadLineAdapter extends RecyclerView.Adapter<NewsHeadLineAdapte
                 .load(imgurl)
                 .into(holder.newsPoster);
 
-
-        holder.openNews.setOnClickListener(new View.OnClickListener() {
+        holder.headlines.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 final CustomTabsIntent intent = new CustomTabsIntent.Builder().build();
-
                 intent.launchUrl(activity, Uri.parse(url));
             }
 

@@ -12,8 +12,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/source_name"
@@ -27,40 +26,29 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/country_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_below="@id/source_name"
-            android:lineSpacingExtra="5dp"
-            android:textAlignment="center"
-            android:textColor="#ffffff"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        <TextView
             android:id="@+id/category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/source_name"
             android:layout_margin="10dp"
-            android:layout_below="@id/country_name"
             android:lineSpacingExtra="5dp"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_below="@id/source_name"
-                android:layout_toRightOf="@id/category"
-                android:layout_toEndOf="@id/category"
-                android:lineSpacingExtra="5dp"
-                android:textAlignment="center"
-                android:textColor="#8DC2F3"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-        </RelativeLayout>
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/source_name"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@id/category"
+            android:layout_toRightOf="@id/category"
+            android:lineSpacingExtra="5dp"
+            android:textAlignment="center"
+            android:textColor="#8DC2F3"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
 </android.support.v7.widget.CardView>
